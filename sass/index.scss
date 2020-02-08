@@ -1,0 +1,96 @@
+$neo-shadow: 6px 6px 16px rgba(209, 205, 199, 0.7),
+-6px -6px 16px rgba(255, 255, 255, 0.7);
+
+$background: #efeeee;
+
+$neo-border: rgba(255, 255, 255, 0.2);
+
+body {
+  background-color: $background;
+  width: 500px;
+  height: 300px;
+  padding: 10px;
+
+  button {
+    text-align: center;
+    width: 120px;
+    box-shadow: $neo-shadow;
+    border: $neo-border;
+    margin: 5px;
+  }
+
+  .column {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #first-column {
+    width: 300px;
+
+    .recent {
+      opacity: 70%;
+      font-size: 0.75em;
+      font-weight: bold;
+      margin: 0 12px 10px 0;
+      border: 0;
+      box-shadow: none;
+      display: inline;
+    }
+
+    #search-button-container {
+      text-align: center;
+    }
+
+    input {
+      margin-top: 10px;
+      box-shadow: $neo-shadow;
+      border: $neo-border;
+    }
+
+    #icon-bar {
+      margin-top: 10px;
+      text-align: center;
+    }
+  }
+
+
+  #second-column {
+    text-align: right;
+  }
+
+  #root {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .icon {
+    margin-top: 100px;
+    border-radius: 4px;
+    width: 150px;
+    height: 150px;
+    padding: 5px;
+    background-color: $neo-shadow;
+    box-shadow: $neo-shadow;
+    border: $neo-border;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+  }
+
+  #report-button {
+    text-align: right;
+
+  }
+
+  #bug-report-success {
+    color: #21bf73;
+    font-size: 0.75em;
+    font-weight: bold;
+  }
+
+  #definition {
+    padding: 5px;
+    color: black;
+  }
+}
