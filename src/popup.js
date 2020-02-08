@@ -54,18 +54,32 @@ z.addEventListener('click',
     chrome.tabs.create({
 
       url: urls,
-
-
     });
+  });
+
+window.addEventListener('DOMContentLoaded', () => {
+  // ...query for the active tab...
+  chrome.tabs.query({
+    active: true,
+    currentWindow: true
+  }, tabs => {
+    // ...and send a request for the DOM info...
+    chrome.tabs.sendMessage(
+      tabs[0].id, {
+        from: 'popup',
+        subject: 'DOMInfo'
+      },
+      // ...also specifying a callback to be called 
+      //    from the receiving end (content script).
+      setDOMInfo);
+  });
+});
 
 
 
-    //const log = document.querySelectorAll(" #container > div > div._5wt5ag > div > div > div:nth-child(1) > div")
-
-  }
 
 
 
-);
+
 
 /* eslint-disable-next-line no-unused-vars */
