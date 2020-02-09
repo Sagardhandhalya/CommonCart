@@ -4,10 +4,12 @@ x.addEventListener('click',
 
     let urls = ['https://www.flipkart.com/viewcart?otracker=Cart_Icon_Click',
       'https://www.amazon.in/gp/cart/view.html?ref_=nav_cart',
-      'https://www.snapdeal.com/cart/addToCart'
+      'https://www.snapdeal.com/',
+      'https://paytmmall.com/cart'
     ]
 
     if (urls.length !== 0) {
+
       for (const url of urls) {
 
         chrome.tabs.create({
@@ -49,35 +51,73 @@ var z = document.getElementById("fetch-data");
 z.addEventListener('click',
   function fetchdata() {
 
-    let urls = 'https://www.flipkart.com/viewcart?otracker=Cart_Icon_Click@hash=56a045b452102c59d840ec097d59d9467e13a3f34f6494e539ffd32c1bb35f18';
+    let urls1 = 'https://www.flipkart.com/viewcart?otracker=Cart_Icon_Click@hash=fla045b452102c59d840ec097d59d9467e13a3f34f6494e539ffd32c1bb35f18';
 
     chrome.tabs.create({
 
-      url: urls,
+      url: urls1,
     });
+    let urls2 = 'https://paytmmall.com/cart@hash=pma045b452102c59d840ec097d59d9467e13a3f34f6494e539ffd32c1bb35f18';
+
+    chrome.tabs.create({
+
+      url: urls2,
+    });
+
+
+
   });
 
-window.addEventListener('DOMContentLoaded', () => {
-  // ...query for the active tab...
-  chrome.tabs.query({
-    active: true,
-    currentWindow: true
-  }, tabs => {
-    // ...and send a request for the DOM info...
-    chrome.tabs.sendMessage(
-      tabs[0].id, {
-        from: 'popup',
-        subject: 'DOMInfo'
-      },
-      // ...also specifying a callback to be called 
-      //    from the receiving end (content script).
-      setDOMInfo);
-  });
-});
+
+
+var q = document.getElementById("load-data");
+q.addEventListener('click',
+  function loaddata() {
+
+    chrome.storage.local.get(function (val) {
+      var x = document.getElementById("data");
 
 
 
 
+
+
+      var node = document.createElement("LI"); // Create a <li> node
+      var textnode = document.createTextNode(val["am-name"]); // Create a text node
+      node.appendChild(textnode);
+      x.appendChild(node);
+
+      var node = document.createElement("LI"); // Create a <li> node
+      var textnode = document.createTextNode(val["am-de"]); // Create a text node
+      node.appendChild(textnode);
+      x.appendChild(node);
+
+      var node = document.createElement("LI"); // Create a <li> node
+      var textnode = document.createTextNode(val["pm-name"]); // Create a text node
+      node.appendChild(textnode);
+      x.appendChild(node);
+
+      var node = document.createElement("LI"); // Create a <li> node
+      var textnode = document.createTextNode(val["pm-de"]); // Create a text node
+      node.appendChild(textnode);
+      x.appendChild(node);
+
+
+    });
+  })
+//  var jqxhr = $.get("https://www.flipkart.com", function (data) {
+
+//   })
+//   .done(function () {
+//     alert("second success");
+//     var x = document.getElementById("data");
+
+//     var node = document.createElement("LI"); // Create a <li> node
+//     var textnode = document.createTextNode(data.text()); // Create a text node
+//     node.appendChild(textnode);
+
+//     x.appendChild(node);
+//   });
 
 
 

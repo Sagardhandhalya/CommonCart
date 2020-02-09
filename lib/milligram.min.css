@@ -42,8 +42,8 @@ button,
 input[type='button'],
 input[type='reset'],
 input[type='submit'] {
-    background-color: #9b4dca;
-    border: 0.1rem solid #9b4dca;
+    background-color: #208341;
+    border: 0.1rem solid #208341;
     border-radius: .4rem;
     color: #fff;
     cursor: pointer;
@@ -70,8 +70,8 @@ input[type='reset']:focus,
 input[type='reset']:hover,
 input[type='submit']:focus,
 input[type='submit']:hover {
-    background-color: #606c76;
-    border-color: #606c76;
+    background-color: #1486e4;
+    border-color: #1486e4;
     color: #fff;
     outline: 0
 }
@@ -578,37 +578,35 @@ h3 {
 h4 {
     font-size: 2.2rem;
     letter-spacing: -.08rem;
-    line-height: 1.35
-}
 
-h5 {
-    font-size: 1.8rem;
-    letter-spacing: -.05rem;
-    line-height: 1.5
-}
+    line-height: 1.35 h5 {
+        font-size: 1.8rem;
+        letter-spacing: -.05rem;
+        line-height: 1.5
+    }
 
-h6 {
-    font-size: 1.6rem;
-    letter-spacing: 0;
-    line-height: 1.4
-}
+    h6 {
+        font-size: 1.6rem;
+        letter-spacing: 0;
+        line-height: 1.4
+    }
 
-img {
-    max-width: 100%
-}
+    img {
+        max-width: 100%
+    }
 
-.clearfix:after {
-    clear: both;
-    content: ' ';
-    display: table
-}
+    .clearfix:after {
+        clear: both;
+        content: ' ';
+        display: table
+    }
 
-.float-left {
-    float: left
-}
+    .float-left {
+        float: left
+    }
 
-.float-right {
-    float: right
-}
+    .float-right {
+        float: right
+    }
 
-/*# sourceMappingURL=milligram.min.css.map */
+    /*# sourceMappingURL=milligram.min.css.map */

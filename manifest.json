@@ -1,10 +1,10 @@
 {
-  "name": "Notes Kitty",
-  "short_name": "Notes Kitty",
-  "version": "1.1",
-  "description": "The last note taking app you'll ever need.",
-  "permissions": ["cookies", "contextMenus", "storage", "declarativeContent", "activeTab", "tabs", "https://duckduckgo.com/*"],
-  "content_security_policy": "script-src  'self' https://www.gstatic.com https://cdn.firebase.com https://*.firebaseio.com; object-src 'self'",
+  "name": "CommonCart",
+  "short_name": "CCart",
+  "version": "1.0",
+  "description": "Cart that can show you data of your every cart",
+  "permissions": ["cookies", "contextMenus", "storage", "declarativeContent", "activeTab", "tabs", "<all_urls>"],
+  "content_security_policy": "script-src  'self' https://ajax.googleapis.com; object-src 'self'",
   "content_scripts": [{
     "matches": [
       "<all_urls>"
@@ -12,9 +12,10 @@
     "js": ["src/content.js"]
   }],
   "icons": {
-    "16": "icon16.png",
-    "48": "icon48.png",
-    "128": "icon128.png"
+    "16": "16x16.png",
+    "32": "32x32.png",
+    "64": "64x64.png",
+    "128": "128x128.png"
   },
   "background": {
     "scripts": ["src/background.js"],
