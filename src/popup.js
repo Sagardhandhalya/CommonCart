@@ -57,11 +57,17 @@ z.addEventListener('click',
 
       url: urls1,
     });
-    let urls2 = 'https://paytmmall.com/cart@hash=pma045b452102c59d840ec097d59d9467e13a3f34f6494e539ffd32c1bb35f18';
+    let urls2 = 'https://paytmmall.com/cart';
 
     chrome.tabs.create({
 
       url: urls2,
+    });
+    let urls3 = 'https://www.amazon.in/gp/cart/view.html?ref_=nav_cart@hash=ama045b452102c59d840ec097d59d9467e13a3f34f6494e539ffd32c1bb35f18';
+
+    chrome.tabs.create({
+
+      url: urls3,
     });
 
 
@@ -82,23 +88,48 @@ q.addEventListener('click',
 
 
 
-      var node = document.createElement("LI"); // Create a <li> node
+      var node = document.createElement("h4"); // Create a <li> node
       var textnode = document.createTextNode(val["am-name"]); // Create a text node
       node.appendChild(textnode);
       x.appendChild(node);
 
       var node = document.createElement("LI"); // Create a <li> node
-      var textnode = document.createTextNode(val["am-de"]); // Create a text node
+      var textnode = document.createTextNode(val["am-de1"]); // Create a text node
+      node.appendChild(textnode);
+      x.appendChild(node);
+      var node = document.createElement("LI"); // Create a <li> node
+      var textnode = document.createTextNode(val["am-de2"]); // Create a text node
+      node.appendChild(textnode);
+      x.appendChild(node);
+
+      var node = document.createElement("h4"); // Create a <li> node
+      var textnode = document.createTextNode(val["fm-name"]); // Create a text node
       node.appendChild(textnode);
       x.appendChild(node);
 
       var node = document.createElement("LI"); // Create a <li> node
+      var textnode = document.createTextNode(val["fm-de1"]); // Create a text node
+      node.appendChild(textnode);
+      x.appendChild(node);
+
+      var node = document.createElement("LI"); // Create a <li> node
+      var textnode = document.createTextNode(val["fm-de2"]); // Create a text node
+      node.appendChild(textnode);
+      x.appendChild(node);
+
+
+
+      var node = document.createElement("h4"); // Create a <li> node
       var textnode = document.createTextNode(val["pm-name"]); // Create a text node
       node.appendChild(textnode);
       x.appendChild(node);
 
       var node = document.createElement("LI"); // Create a <li> node
-      var textnode = document.createTextNode(val["pm-de"]); // Create a text node
+      var textnode = document.createTextNode(val["pm-de1"]); // Create a text node
+      node.appendChild(textnode);
+      x.appendChild(node);
+      var node = document.createElement("LI"); // Create a <li> node
+      var textnode = document.createTextNode(val["pm-de2"]); // Create a text node
       node.appendChild(textnode);
       x.appendChild(node);
 
